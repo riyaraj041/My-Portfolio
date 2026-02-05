@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RIYA RAJ | BCA STUDENT | JIMS Noida Extension </title>
+
+<style>
+/* ===== LAVENDER & CHARCOAL — LIGHT THEME (default) ===== */
+:root {
+    --lavender: #7C3AED;
+    --soft-lavender: #A78BFA;
+    --charcoal: #1F2937;
+    --dark-charcoal: #0B1020;
+    --bg-light: #FAF9FF;
+    --text-light: #111827;
+    --text-muted: #6D6A80;
+    --section-max: 1100px;
+
+    --bg-gradient-start: #FAF9FF;
+    --bg-gradient-mid: #FAF9FF;
+    --bg-gradient-end: #F3F0FF;
+    --nav-bg: rgba(250, 249, 255, 0.95);
+    --card-bg: #FFFFFF;
+    --bar-bg: #EDE9FE;
+    --text-primary: #111827;
+    --text-secondary: #1F2937;
+    --heading-color: #111827;
+    --btn-text: #FFFFFF;
+    --footer-bg: #F3F0FF;
+    --border-color: rgba(124, 58, 237, 0.15);
+    --border-hover: rgba(167, 139, 250, 0.35);
+    --shadow-accent: rgba(124, 58, 237, 0.25);
+    --shadow-accent-strong: rgba(124, 58, 237, 0.4);
+}
+
+/* ===== LAVENDER & CHARCOAL — DARK THEME ===== */
+[data-theme="dark"] {
+    --bg-gradient-start: #0B1020;
+    --bg-gradient-mid: #0B1020;
+    --bg-gradient-end: #1F2937;
+    --nav-bg: rgba(11, 16, 32, 0.95);
+    --card-bg: #1F2937;
+    --bar-bg: #374151;
+    --text-primary: #F3F0FF;
+    --text-secondary: #E5E2F0;
+    --text-muted: #9CA3AF;
+    --heading-color: #F3F0FF;
+    --btn-text: #FFFFFF;
+    --footer-bg: #0B1020;
+    --border-color: rgba(124, 58, 237, 0.25);
+    --border-hover: rgba(167, 139, 250, 0.45);
+    --shadow-accent: rgba(124, 58, 237, 0.3);
+    --shadow-accent-strong: rgba(167, 139, 250, 0.35);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(160deg, var(--bg-gradient-start) 0%, var(--bg-gradient-mid) 40%, var(--bg-gradient-end) 100%);
+    color: var(--text-primary);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    min-height: 100vh;
+    transition: background 0.4s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ===== THEME TOGGLE ===== */
+.theme-toggle {
+    background: var(--card-bg);
+    border: 1px solid var(--lavender);
+    color: var(--text-primary);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 16px var(--shadow-accent-strong);
+    border-color: var(--soft-lavender);
+}
+
+/* ===== NAVBAR ===== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    height: 4.5rem;
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background 0.4s ease, border-color 0.3s ease;
+}
+
+nav .left {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    letter-spacing: 0.02em;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.25rem;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.25s ease;
+}
+
+nav ul li a:hover {
+    color: var(--soft-lavender);
+}
+
+/* ===== HERO SECTION ===== */
+.firstsection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--section-max);
+    margin: 0 auto;
+    padding: 5rem 2rem 6rem;
+    gap: 4rem;
+}
+
+.leftsection {
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    line-height: 1.35;
+    flex: 1;
+}
+
+.leftsection > div {
+    margin-bottom: 0.5rem;
+}
+
+.purple {
+    color: var(--lavender);
+    font-weight: 700;
+    text-shadow: 0 0 12px var(--shadow-accent-strong);
+}
+
+#element {
+    color: var(--soft-lavender);
+    font-weight: 600;
+    display: inline-block;
+    min-height: 1.4em;
+    text-shadow: 0 0 10px var(--shadow-accent);
+}
+
+.resume-btn {
+    margin-top: 2rem;
+    padding: 0.85rem 2rem;
+    background: var(--lavender);
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    color: var(--btn-text);
+    font-weight: 600;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.resume-btn:hover {
+    background: var(--soft-lavender);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--shadow-accent-strong);
+}
+
+.hero-links {
+    margin-top: 1.75rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.hero-links a {
+    color: var(--lavender);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.hero-links a:hover {
+    color: var(--soft-lavender);
+}
+
+.rightsection {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rightsection img {
+    width: 300px;
+    max-width: 100%;
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+    box-shadow: 0 20px 50px var(--shadow-accent);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ===== SECTIONS COMMON ===== */
+section {
+    max-width: var(--section-max);
+    margin: 0 auto;
+    padding: 4.5rem 2rem 5rem;
+    min-height: auto;
+}
+
+section h1 {
+    margin-bottom: 1rem;
+    font-size: 1.85rem;
+    font-weight: 600;
+    color: var(--heading-color);
+    letter-spacing: 0.02em;
+}
+
+[data-theme="dark"] section h1 {
+    text-shadow: 0 0 8px var(--shadow-accent);
+}
+
+:root section h1 {
+    text-shadow: none;
+}
+
+section h1::after {
+    display: none;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+    margin: 0 auto;
+    max-width: var(--section-max);
+    width: calc(100% - 4rem);
+}
+
+/* ===== ABOUT ===== */
+.about p {
+    max-width: 42rem;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+/* ===== TIMELINE ===== */
+.secondsection .section-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    font-size: 0.95rem;
+}
+
+.secondsection .box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.vertical {
+    position: relative;
+    flex: 1;
+    min-width: 140px;
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.vertical::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 2rem;
+    background: linear-gradient(180deg, var(--lavender), var(--soft-lavender));
+    border-radius: 2px;
+}
+
+.image-top {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+    position: absolute;
+    top: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    background: var(--card-bg);
+    padding: 4px;
+}
+
+.vertical-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.vertical-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    max-width: 100%;
+}
+
+/* ===== EXPERIENCE ===== */
+.experience .experience-list {
+    max-width: 42rem;
+}
+
+.experience-item {
+    background: var(--card-bg);
+    padding: 1.75rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    margin-bottom: 1.25rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.experience-item:last-child {
+    margin-bottom: 0;
+}
+
+.experience-item:hover {
+    box-shadow: 0 10px 25px var(--shadow-accent);
+    border-color: var(--border-hover);
+}
+
+.experience-item .exp-title {
+    color: var(--lavender);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+}
+
+.experience-item .exp-org {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+}
+
+.experience-item .exp-duration {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+}
+
+.experience-item .exp-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+
+/* ===== SKILLS ===== */
+.skills .skill-list {
+    max-width: 36rem;
+}
+
+.skill-bar {
+    margin-bottom: 1.5rem;
+}
+
+.skill-bar:last-child {
+    margin-bottom: 0;
+}
+
+/* Divider line between skills (same style as section hr) */
+.skill-bar::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+    margin-top: 1.5rem;
+    border: none;
+}
+
+.skill-bar:last-child::after {
+    display: none;
+}
+
+.skill-bar span {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.bar {
+    background: var(--bar-bg);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    height: 10px;
+}
+
+.bar div {
+    height: 100%;
+    background: linear-gradient(90deg, var(--lavender), var(--soft-lavender));
+    border-radius: 0.5rem;
+    transition: width 0.6s ease;
+}
+
+/* ===== CORE COMPETENCIES ===== */
+.competencies .competency-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem 0;
+    max-width: 42rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.competencies .competency-list span {
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.25s ease;
+}
+
+.competencies .competency-list span::before {
+    content: "◆ ";
+    color: var(--lavender);
+    margin-right: 0.4rem;
+    font-size: 0.6em;
+    vertical-align: middle;
+    transition: color 0.25s ease;
+}
+
+.competencies .competency-list span:hover {
+    color: var(--lavender);
+}
+
+.competencies .competency-list span:hover::before {
+    color: var(--soft-lavender);
+}
+
+/* ===== PROJECTS ===== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 1.75rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px var(--shadow-accent);
+    border-color: var(--border-hover);
+}
+
+.project-card h3 {
+    color: var(--lavender);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.project-card .project-link {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: var(--lavender);
+    color: var(--btn-text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.project-card .project-link:hover {
+    background: var(--soft-lavender);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px var(--shadow-accent-strong);
+}
+
+/* ===== CERTIFICATIONS ===== */
+.certifications .cert-list {
+    list-style: none;
+    max-width: 42rem;
+}
+
+.certifications .cert-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+    transition: border-color 0.25s ease;
+}
+
+.certifications .cert-list li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.certifications .cert-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: var(--lavender);
+    border-radius: 50%;
+    transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.certifications .cert-list li:hover::before {
+    background: var(--soft-lavender);
+    box-shadow: 0 0 8px var(--shadow-accent);
+}
+
+.certifications .cert-list .cert-title {
+    color: var(--lavender);
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+    line-height: 1.4;
+}
+
+.certifications .cert-list .cert-issuer {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.certifications .cert-list .cert-link {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: var(--lavender);
+    color: var(--btn-text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: 2rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.certifications .cert-list .cert-link:hover {
+    background: var(--soft-lavender);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px var(--shadow-accent-strong);
+}
+
+/* ===== CONTACT ===== */
+.contact form {
+    max-width: 28rem;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    background: var(--card-bg);
+    color: var(--text-primary);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: none;
+    border-color: var(--lavender);
+}
+
+.contact button {
+    margin-top: 0.5rem;
+    background: var(--lavender);
+    color: var(--btn-text);
+    border: none;
+    padding: 0.85rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+}
+
+.contact button:hover {
+    background: var(--soft-lavender);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--shadow-accent-strong);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--footer-bg);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+    transition: background 0.4s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem 1.5rem;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    nav ul {
+        gap: 1.25rem;
+    }
+
+    .firstsection {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 1.5rem 4rem;
+        gap: 2.5rem;
+    }
+
+    .leftsection {
+        order: 1;
+    }
+
+    .hero-links {
+        justify-content: center;
+    }
+
+    .rightsection {
+        order: 0;
+    }
+
+    .rightsection img {
+        width: 220px;
+    }
+
+    section {
+        padding: 3rem 1.5rem 4rem;
+    }
+
+    .secondsection .box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .vertical {
+        min-width: 100%;
+    }
+
+    .vertical::before {
+        left: 1.5rem;
+        transform: none;
+    }
+
+    .vertical {
+        text-align: left;
+        padding-left: 4rem;
+        padding-top: 0.5rem;
+    }
+
+    .image-top {
+        left: 0;
+        transform: none;
+    }
+}
+</style>
+</head>
+<body>
+	<header>
+		<nav>
+    <div class="left">Riya's Portfolio</div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#competencies">Core Competencies</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#">Contact</a></li>
+        <li>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">🌙</button>
+        </li>
+    </ul>
+</nav>
+
+	</header> 
+	<main>
+	<section class="firstsection ">
+		<div class="leftsection">
+			Hi my name is <span class="purple">Riya Raj</span> 
+			<div>and I am a passionate </div>
+			<span id="element"></span>
+
+		<br>
+
+<a href="resume.pdf" download>
+    <button class="resume-btn">Download Resume</button>
+</a>
+
+<div class="hero-links">
+    <a href="https://github.com/riyaraj0411" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="https://www.linkedin.com/in/riya-raj-15713a2a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+
+		</div>
+		<div class="rightsection">
+			<img src="hina.png.jpeg" alt=""> 
+		</div>
+	</section>	
+
+	<hr>
+
+	<section class="about">
+    <h1>About Me</h1>
+    <p>
+        I am a BCA student passionate about software and web development.
+		I have hands-on knowledge in C, C++, Python, JavaScript, R, and tools like VS Code, SQL, and Power BI.
+I aspire to become a Full-Stack Developer and enjoy applying my skills to real-world projects.
+		I’m a quick learner with strong problem-solving, communication, and time-management skills.
+		Apart from coding, I love art and painting, which inspire creativity in my work.
+    </p>
+</section>
+
+<hr>
+
+	<section class="secondsection">
+    <h1>Learning Journey</h1>
+    <p class="section-subtitle">Work I've Done So Far</p>
+
+  <div class="box">
+
+    <div class="vertical">
+        <img class="image-top" src="developer.png.jpeg" alt="">
+        <div class="vertical-title">C</div>
+        <div class="vertical-desc">
+            Fundamentals of programming, data structures and algorithms.
+        </div>
+    </div>
+
+    <div class="vertical">
+        <img class="image-top" src="developer.png.jpeg" alt="">
+        <div class="vertical-title">C++</div>
+        <div class="vertical-desc">
+            OOP concepts, STL and problem-solving for competitive programming.
+        </div>
+    </div>
+
+    <div class="vertical">
+        <img class="image-top" src="developer.png.jpeg" alt="">
+        <div class="vertical-title">Python</div>
+        <div class="vertical-desc">
+            Scripting, data analysis and automation.
+        </div>
+    </div>
+
+    <div class="vertical">
+        <img class="image-top" src="developer.png.jpeg" alt="">
+        <div class="vertical-title">HTML & CSS</div>
+        <div class="vertical-desc">
+            Designed responsive webpages and layouts using modern CSS.
+        </div>
+    </div>
+
+    <div class="vertical">
+        <img class="image-top" src="developer.png.jpeg" alt="">
+        <div class="vertical-title">JavaScript</div>
+        <div class="vertical-desc">
+            Built interactive features using DOM manipulation and events.
+        </div>
+    </div>
+
+    <div class="vertical">
+        <img class="image-top" src="developer.png.jpeg" alt="">
+        <div class="vertical-title">Mini Projects</div>
+        <div class="vertical-desc">
+            Portfolio website, landing pages, forms and JS apps.
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<hr>
+
+<section class="experience" id="experience">
+    <h1>Experience</h1>
+    <div class="experience-list">
+        <article class="experience-item">
+            <h3 class="exp-title">Virtual Internship</h3>
+            <p class="exp-org">YBI Foundation</p>
+            <p class="exp-duration">45 days</p>
+            <p class="exp-desc">Python & Pandas – data analysis and automation.</p>
+        </article>
+    </div>
+</section>
+
+<hr>
+
+<section class="skills">
+    <h1>Skills</h1>
+    <div class="skill-list">
+    <div class="skill-bar">
+        <span>HTML</span>
+        <div class="bar"><div style="width:90%"></div></div>
+    </div>
+
+    <div class="skill-bar">
+        <span>CSS</span>
+        <div class="bar"><div style="width:80%"></div></div>
+    </div>
+
+    <div class="skill-bar">
+        <span>JavaScript</span>
+        <div class="bar"><div style="width:75%"></div></div>
+    </div>
+
+    <div class="skill-bar">
+        <span>Node.js</span>
+        <div class="bar"><div style="width:65%"></div></div>
+    </div>
+    </div>
+</section>
+
+<hr>
+
+<section class="competencies" id="competencies">
+    <h1>Core Competencies</h1>
+    <div class="competency-list">
+        <span>Communication</span>
+        <span>Problem-Solving</span>
+        <span>Adaptability</span>
+        <span>Team Collaboration</span>
+        <span>Time Management</span>
+        <span>Self-Learning</span>
+        <span>Critical Thinking</span>
+        <span>Attention to Detail</span>
+        <span>Accountability</span>
+        <span>Initiative</span>
+    </div>
+</section>
+
+<hr>
+
+<section class="projects">
+    <h1>Projects</h1>
+
+    <div class="project-grid">
+
+        <article class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>Personal responsive portfolio using HTML, CSS & JS.</p>
+            <a class="project-link" href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+        </article>
+
+        <article class="project-card">
+            <h3>Netflix Clone</h3>
+            <p>Clone of Netflix UI with modern layout and styling.</p>
+            <a class="project-link" href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+        </article>
+
+    </div>
+</section>
+
+<hr>
+
+<section class="certifications" id="certifications">
+    <h1>Certifications</h1>
+    <ul class="cert-list">
+        <li>
+            <span class="cert-title">Certification in Python Django and Html pakage</span>
+            <p class="cert-issuer">Udemy</p>
+            <a class="cert-link" href=https://ude.my/UC-38d40a46-cedb-42ab-87d8-3f65f2d73f5e" target="_blank" rel="noopener noreferrer">View Certificate</a>
+        </li>
+         <li>
+            <span class="cert-title">Certification in Python</span>
+            <p class="cert-issuer">Udemy</p>
+            <a class="cert-link" href="https://ude.my/UC-38d40a46-cedb-42ab-87d8-3f65f2d73f5e"  target="_blank" rel="noopener noreferrer">View Certificate</a>
+        </li>
+        <li>
+            <span class="cert-title">Certification in c++</span>
+            <p class="cert-issuer">Udemy</p>
+            <a class="cert-link" href="https://example.com/cert/3" target="_blank" rel="noopener noreferrer">View Certificate</a>
+        </li>
+        <li>
+            <span class="cert-title">Certification in AI AWS</span>
+            <p class="cert-issuer">Udemy</p>
+            <a class="cert-link" href="https://example.com/cert/4" target="_blank" rel="noopener noreferrer">View Certificate</a>
+        </li>
+        <li>
+            <span class="cert-title">Certification in workshop of Power BI</span>
+            <p class="cert-issuer">Ducat</p>
+            <a class="cert-link" href="UC aionaws.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+        </li>
+        <li>
+            <span class="cert-title">Certification in workshop of C#</span>
+            <p class="cert-issuer"> From College </p>
+            <a class="cert-link" href="https://example.com/cert/6" target="_blank" rel="noopener noreferrer">View Certificate</a>
+        </li>
+    </ul>
+</section>
+
+<hr>
+
+<section class="contact">
+    <h1>Contact Me</h1>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</section>
+
+	</main>
+	<script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+	
+	<script>
+    var typed = new Typed('#element', {
+      strings: ['Full Stack Developer', 'Video Editor'],
+      typeSpeed: 50,
+    });
+  </script>
+
+  <footer>
+    © 2026 Riya Raj | BCA Student | Built with 💜
+  </footer>
+
+  <script>
+    (function() {
+      var themeToggle = document.getElementById('themeToggle');
+      var html = document.documentElement;
+      var saved = localStorage.getItem('portfolio-theme');
+      if (saved === 'dark') {
+        html.setAttribute('data-theme', 'dark');
+        themeToggle.textContent = '☀️';
+      } else {
+        html.removeAttribute('data-theme');
+        themeToggle.textContent = '🌙';
+      }
+      themeToggle.addEventListener('click', function() {
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+          html.removeAttribute('data-theme');
+          themeToggle.textContent = '🌙';
+          localStorage.setItem('portfolio-theme', 'light');
+        } else {
+          html.setAttribute('data-theme', 'dark');
+          themeToggle.textContent = '☀️';
+          localStorage.setItem('portfolio-theme', 'dark');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
